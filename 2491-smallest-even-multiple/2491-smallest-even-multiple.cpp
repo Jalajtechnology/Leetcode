@@ -1,3 +1,4 @@
+// gcd*lcm =product of two no .
 class Solution {
 public:
     int smallestEvenMultiple(int n) {
