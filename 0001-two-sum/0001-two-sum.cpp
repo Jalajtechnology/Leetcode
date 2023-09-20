@@ -1,7 +1,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
-        unordered_map<int,int>hashtable;
+         unordered_map<int,int>hashtable;
         vector<int>ans;
         for(int i=0;i<nums.size();i++)
         {
@@ -16,6 +16,7 @@ public:
         }
         return ans;
        
+        
         
     }
 };
