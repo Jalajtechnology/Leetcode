@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool hasGroupsSizeX(vector<int>& deck) {
+        // c++ used euclidean algorithm its tc is log(n) where n is upper limit of no max of nos. this code tc is deck.size()+M(unique elements in deck)+M *log2(max(result array))//
        
        unordered_map<int,int>hashtable;
        vector<int>result;
