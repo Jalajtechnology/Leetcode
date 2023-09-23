@@ -1,5 +1,7 @@
 class Solution {
 public:
+
+// reverse array from nums.size()-1 to nums.size()-k then reverse from 0 to n-k-1  then reverse the whole num//
     void rotate(vector<int>& nums, int k) {
         int n=nums.size();
         if(k>=nums.size())
