@@ -28,11 +28,8 @@ public:
         int mid=(start+end)/2;
         while(start<=end)
         {
-            if(start==end)
-            {
-                return start;
-            }
-            else if(mid>start && nums[mid]<nums[mid-1])
+            
+             if(mid>start && nums[mid]<nums[mid-1])
             {
                 return mid-1;
             }
@@ -53,6 +50,14 @@ public:
         return -1;
     }
     int search(vector<int>& nums, int target) {
+        if(nums.size()==1)
+        {
+            if(target==nums[0])
+            {
+                return 0;
+            }
+            return -1;
+        }
         int pivotindex=findpivotindex(nums);
         int l=0;
         if(pivotindex+1==nums.size())
