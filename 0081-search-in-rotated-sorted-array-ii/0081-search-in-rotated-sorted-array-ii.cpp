@@ -7,15 +7,16 @@ public:
         while(start<=end)
         {
             mid=(start+end)/2;
-            if(nums[mid]==target)
-            {
-                return true;
-            }
-            if(nums[mid]==nums[start]&& nums[mid]==nums[end])
+            
+            if(nums[mid]==nums[start]&& nums[mid]==nums[end] && mid!=start && mid!=end)
             {
                 start++;
                 end--;
                 continue;
+            }
+            if(nums[mid]==target)
+            {
+                return true;
             }
              
             if(nums[mid]>=nums[start])//identification of sorted part
