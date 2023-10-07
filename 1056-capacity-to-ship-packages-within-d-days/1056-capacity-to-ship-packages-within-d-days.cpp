@@ -37,12 +37,12 @@ public:
         int start=max;
         int end=sum;
         int mid=(sum+end)/2;
-        while(start<=end)
+        while(start<end)
         {
             int k=finddays(mid,weights);
             if(k<=days)
             {
-                end=mid-1;
+                end=mid;
             }
             else
             {
