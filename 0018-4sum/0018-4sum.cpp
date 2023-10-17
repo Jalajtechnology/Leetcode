@@ -13,12 +13,13 @@ public:
             {
                 int k=j+1;
                 int l=nums.size()-1;
+                long long result=(long long)target-((long long)nums[i]+(long long)nums[j]);
                 while(k!=l)
                 {
-                    long long sum=(long long)nums[i]+(long long)nums[j]+(long long)nums[k]+(long long)nums[l];
-                    if(sum<=target)
+                    long long sum=(long long)nums[k]+(long long)nums[l];
+                    if(sum<=result)
                     {
-                        if(sum==target)
+                        if(sum==result)
                         {
                             vector<int>brr;
                             brr.push_back(nums[i]);
