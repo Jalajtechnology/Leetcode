@@ -26,7 +26,8 @@ public:
         sort(nums.begin(),nums.end());
         int max=INT_MIN;;
         int start=2;
-        vector<int>ans;
+        
+        int ans=0;
 
         int end=nums[nums.size()-1]+nums[nums.size()-2];
         int mid=(start+end)/2;
@@ -39,8 +40,7 @@ public:
             {
                 if(k==pairs)
                 {
-                    ans.push_back(mid);
-            
+                    ans=mid;
                 }
                 
                 end=mid-1;
@@ -51,7 +51,7 @@ public:
             }
             mid=(start+end)/2;
         }
-        return start;
+        return ans;
        
          
          
