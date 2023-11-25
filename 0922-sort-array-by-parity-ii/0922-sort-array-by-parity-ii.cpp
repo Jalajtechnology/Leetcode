@@ -3,22 +3,27 @@ public:
     vector<int> sortArrayByParityII(vector<int>& nums) {
         int i=0;
         int j=1;
-        vector<int>arr(nums.size());
-        for(int k=0;k<nums.size();k++)
+        while(i<nums.size()&& j<nums.size())
         {
-            if(nums[k]%2==0 && i<arr.size())
+            if((i%2==0) &&(nums[i]%2==0))
             {
-                arr[i]=nums[k];
                 i=i+2;
             }
-            else if(nums[k]%2 !=0 && j<arr.size())
+           else if((j%2 !=0) &&(nums[j]%2!=0))
+           {
+               j=j+2;
+           }
+            else if(nums[i]%2!=0 && nums[j]%2==0)
             {
-                arr[j]=nums[k];
-                j=j+2;
-
+                swap(nums[i],nums[j]);
             }
-        }
-        return arr;
         
+            
+        }
+        return nums;
+            
+            
     }
+       
+       
 };
