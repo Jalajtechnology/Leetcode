@@ -17,7 +17,7 @@ public:
               reverse(k.begin(),k.end());
               if(hashtable.find(k)!=hashtable.end())
               {
-                  length=length+4*min(hashtable[words[i]],hashtable[k]);
+                  length=length+4*(min(hashtable[words[i]],hashtable[k]));
                   hashtable[k]=0;
               }
           }
