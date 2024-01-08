@@ -18,15 +18,7 @@ public:
                 return false;
             }
         }
-        if(index1 !=-1 && index2==-1)
-        {
-            return true;
-        }
-        else if(index1==-1 && index2!=-1)
-        {
-            return true;
-        }
         return true;
-        
+       
     }
 };
