@@ -5,19 +5,18 @@ public:
         vector<int>arr;
         for(int i=0;i<nums.size();i++)
         {
-            if((hashtable.find(target-nums[i])==hashtable.end()))
+            if(hashtable.find(target-nums[i])!=hashtable.end())
             {
-                hashtable[nums[i]]=i;
+                arr.push_back(i);
+                arr.push_back(hashtable[target-nums[i]]);
+                break;
             }
             else
             {
-               arr.push_back(hashtable[target-nums[i]]);
-               arr.push_back(i);
-                break;
+                hashtable[nums[i]]=i;
             }
-           
-            
         }
         return arr;
     }
+          
 };
