@@ -1,7 +1,7 @@
 class Solution {
 public:
     int trap(vector<int>& height) {
-        int n=height.size();
+        /*int n=height.size();
         int count=0;
         vector<int>prefix(n);
         vector<int>suffix(n);
@@ -38,7 +38,40 @@ public:
            count=count+k;
         
         }
-        return count;
+        return count;*/
+        int leftmax=0;
+        int rightmax=0;
+        int left=0;
+        int right=height.size()-1;
+        int ans=0;
+        while(left<=right)
+        {
+            if(height[left]<=height[right])
+            {
+                if(leftmax<=height[left])
+                {
+                    leftmax=height[left];
+                }
+                else
+                {
+                    ans=ans+(leftmax-height[left]);
+                }
+                left++;
+            }
+            else
+            {
+                if(rightmax<=height[right])
+                {
+                    rightmax=height[right];
+                }
+                else
+                {
+                    ans=ans+(rightmax-height[right]);
+                }
+                right--;
+            }
+        }
+        return ans;
         
     }
 };
