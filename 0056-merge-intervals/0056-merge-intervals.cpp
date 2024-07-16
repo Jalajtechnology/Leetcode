@@ -2,6 +2,13 @@ class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(),intervals.end());
+        for(int i=0;i<intervals.size();i++)
+        {
+            cout<<intervals[i][0];
+            cout<<intervals[i][1];
+            cout<<endl;
+
+        }
         vector<vector<int>>ans;
         vector<int>resulti;
         resulti.push_back(intervals[0][0]);
